@@ -181,7 +181,7 @@ class KittiDB:
         # Crop bbox to prevent it extending outside image.
         bbox_crop = tuple(max(0, b) for b in bbox)
         bbox_crop = (min(imsize[0], bbox_crop[0]),
-                     min(imsize[0], bbox_crop[1]),
+                     min(imsize[1], bbox_crop[1]),
                      min(imsize[0], bbox_crop[2]),
                      min(imsize[1], bbox_crop[3]))
 
